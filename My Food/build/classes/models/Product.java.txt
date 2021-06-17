@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+
+class Product{
+ private String name;
+ private float price;
+ 
+ public Product(String name, float price){
+	 this.name= name;
+     this.price= price;
+ }
+
+
+public String getname(){
+	return name;
+    }
+}
+
+
+public class Main { 
+  public static void main(String[] args) { 
+    ArrayList<Product> products = new ArrayList<Product>();
+    products.add(new Product("pizza", 700));
+    products.add(new Product("humburger", 150));
+    products.add(new Product("crepes", 100));
+    products.add(new Product("prato do dia", 250));
+    products.add(new Product("mousse", 170));
+    products.add(new Product("sandwich", 100));
+    products.add(new Product("batata frita", 100));
+    products.add(new Product("hot dog", 150));
+    products.add(new Product("pasteis", 10));
+    products.add(new Product("cachupa", 200));
+    
+    String[] names = new String[products.size()];
+   
+   for (int i = 0; i < products.size(); i++) {
+    names[i] = products.get(i).getname();
+     // System.out.println(products.get(i).getname());
+    }
+    
+     for (int i = 0; i < names.length; i++) {
+    	
+     System.out.println(names[i]);
+    }
+  } 
+}
